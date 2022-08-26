@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>web workers</title>
+	<style type="text/css">
+		.maincontainer
+		{
+			border: 1px solid;
+			margin: 20px auto;
+			padding: 20px;
+			height: 400px;
+			width: 500px;
+			overflow: auto;
+		}
+		div
+		{
+			border: 1px solid;
+			margin: 3px;
+			padding: 3px;
+		}
+		.datecontainer
+		{
+			text-align: right;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="datecontainer"></div>
+	<div class="maincontainer"></div>
+
+	<script type="text/javascript">
+
+		var myworker=new Worker("webworkers/mydateworker.js");
+		myworker.onmessage=function(event){   //shownig the msg got from weebworker
+			updateDateTime(event.data);
+		}
+
+		var count=0;
+		function addElement()
+		{
+			count++;
+			var divTag=document.createElement("div");
+			divTag.innerHTML="hello everyone"+count;
+			document.querySelector(".maincontainer").append(divTag);
+		}
+		setInterval(function(){
+			addElement();
+
+		},1000);
+
+		function updateDateTime(date)
+		{
+			document.querySelector(".datecontainer").innerHTML=date;
+		}
+		
+	</script>
+
+</body>
+</html>

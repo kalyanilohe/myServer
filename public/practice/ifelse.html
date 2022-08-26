@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>student details using js</title>
+</head>
+<body>
+<script type="text/javascript">
+	var stud_name,age, gender, m1, m2, m3;
+	stud_name="kalyani";
+	age=25;
+	gender="female";
+	m1=70;
+	m2=77;
+	m3=90;
+	var total=m1+m2+m3;
+	var avg=total/3;
+	console.log("student details");
+	console.log("student name" , stud_name);
+	console.log("student age" , age);
+	console.log("student gender" , gender);
+	console.log("total marks" , total);
+	console.log("average" , avg);
+	
+	if(avg>40)
+	{
+		console.log("student got passed");
+		if(avg>90){
+			console.log("student got distinction");
+		}
+	}else
+	{
+		console.log("student got failed");
+	}
+</script>
+</body>
+</html>

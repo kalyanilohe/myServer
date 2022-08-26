@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>date object</title>
+</head>
+<body>
+<script type="text/javascript">
+	var date=new Date("1/06/2020");
+	console.log(date);
+	var days=["sun","mon","tue","wed","thu","fri","sat"];
+
+	console.log(date.getDate());
+	var dayIndex=date.getDay();
+	console.log(days[dayIndex]);
+
+	var formatedDate=date.getMonth()+"/"+date.getDate()+"/"+date.getFullYear();
+	console.log(formatedDate);
+	
+</script>
+</body>
+</html>

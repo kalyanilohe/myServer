@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>traversing parents</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<style type="text/css">
+		.highlight
+		{
+			border: 1px solid;
+			padding: 5px;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="click" onclick="addChanges()">
+	<div id="mainContainer">
+		<ul>
+			<li>item1</li>
+			<li>item2</li>
+			<li id="special">item3</li>
+			<li>item4</li>
+			<li>item5</li>
+			<li id="abc">item6</li>
+			<li>item7</li>
+
+		</ul>
+		
+	</div>
+	<script type="text/javascript">
+		function addChanges()
+		{
+			
+			/*$("#special").siblings().addClass("highlight");
+			$("#special").next().addClass("highlight");
+			$("#special").nextAll().addClass("highlight");*/
+			$("#special").nextUntil("#abc").addClass("highlight");
+
+			/*some other sibling methods
+
+			prev
+			prevAll
+			prevUntil*/
+
+
+		}
+	</script>
+
+</body>
+</html>

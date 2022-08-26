@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>palendrome in array</title>
+</head>
+<body>
+<script type="text/javascript">
+    var numbers=[];
+    var rem;
+    var final=0;
+    var range=prompt("enter range of array");
+    range=parseInt(range);
+
+    for(var i=0;i<=range;i++)
+    {
+    numbers[i]=prompt("enter value of"+i);
+    numbers[i]=parseInt(numbers[i]);
+
+    while(numbers[i]>0)
+    {
+        rem=numbers[i]%10;
+        numbers[i]=numbers[i]/10;
+        numbers[i]=parseInt(numbers[i]);
+        final=final*10+rem;
+
+    }
+
+    if(final==numbers[i])
+    {
+        console.log("palendrome number is" + numbers[i]);
+    }
+  }
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>passing parameters</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	function info()
+	{
+		var a,b;
+		a=prompt("enter any number");
+		a=parseInt(a);
+		b=prompt("enter any number");
+		b=parseInt(b);
+
+		var sum=displaySum(a,b);
+		console.log("the sum is"+sum);
+	}
+
+	function displaySum(p,q)
+	{
+		var sum=p+q;
+		console.log("about to add");
+		return sum;
+
+	}
+	info();
+</script>
+</body>
+</html>

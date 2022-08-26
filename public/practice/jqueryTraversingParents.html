@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>traversing parents</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<style type="text/css">
+		.highlight
+		{
+			border: 1px solid;
+			padding: 5px;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="click" onclick="addChanges()">
+	<div>
+		<div class="parentBlock">
+			<div>
+				<span id="childContent">
+					Hello
+				</span>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function addChanges()
+		{
+			/*$("#childContent").parent().addClass("highlight");
+			$("#childContent").parents().addClass("highlight");*/
+			$("#childContent").parentsUntil(".parentBlock").addClass("highlight");
+		}
+	</script>
+
+</body>
+</html>

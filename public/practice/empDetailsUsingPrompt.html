@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>employee details using prompt</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	function empDetails()
+	{
+	var emp_name=prompt("enter employee name:");
+
+	var emp_age=prompt("enter age:");
+	emp_age=parseInt(emp_age);
+
+	var emp_department=prompt("enter department:");
+	emp_department=parseInt(emp_department);
+
+	var basic_salary=prompt("enter basic salary");
+	basic_salary=parseInt(basic_salary);
+
+	displayDetails(emp_name,emp_age,emp_department,basic_salary);
+   }
+   
+   function calTotalsal(bsal)
+   {
+	var pf=(bsal*12)/100;
+	var hra=(bsal*25)/100;
+	var total_sal=bsal+pf+hra;
+	return total_sal;
+   }
+  
+  function displayDetails(name,age,dept,bsal)
+  {
+  	var total_sal=calTotalsal(bsal);
+
+	console.log("employee details");
+	console.log("employee name" , name);
+	console.log("employee age" , age);
+	console.log("employee department" , dept);
+	console.log("basic salary" , bsal);
+	console.log("total salary" , total_sal);
+
+	salaryCategory(bsal);
+  }
+
+ function salaryCategory(bsal)
+ {
+	if(bsal>50000)
+	{
+      console.log("you are in a good position");
+	}
+	else
+	{
+		console.log("you need promotion");
+	}
+}
+
+empDetails();
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		class schoolData
+           {
+           constructor()
+                  {
+                 
+                  this.schoolName="abc schhol";
+                  this.schoolAdress="hyd";
+                  }
+            }
+
+       class studentData extends schoolData
+          {
+             constructor()
+             {
+
+              super();
+             this.name="kalyani"
+             this.age=23;
+             }
+            displayData()
+               {
+                  console.log("name is"+ this.name);
+                  console.log("agee is"+ this.age);
+                  console.log("school name is"+ this.schoolName);
+                  console.log("school adress is"+ this.schoolAdress);
+               }
+           }
+   var s1=new studentData();
+   s1.displayData();
+
+	</script>
+
+</body>
+</html>

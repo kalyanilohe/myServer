@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>assignment on drag and drop</title>
+	<style type="text/css">
+		.abc
+		{
+			border: 2px solid;
+			float: left;
+			height: 300px;
+			width: 300px;
+			margin: 10px 45px;
+			padding: 20px;
+			text-align: center;
+			font-size: 20px;
+			font-weight: bold;
+
+		}
+		mens
+		{
+			font-size: 15px;
+			font-weight: bold;
+			margin: 20px 10px;
+			padding: 10px;
+			position: relative;
+			top:0px;
+		
+		}
+		img
+		{
+			height: 70px;
+			width: 80px;
+		    position: relative;
+		    top:10px;
+			margin: 10px 20px;
+		}
+		womens
+		{
+			font-size: 15px;
+			font-weight: bold;
+			margin: 20px 10px;
+			padding: 10px;
+			position: relative;
+			top:0px;
+		
+		}
+		kids
+		{
+			font-size: 15px;
+			font-weight: bold;
+			margin: 20px 10px;
+			padding: 10px;
+			position: relative;
+			top:0px;
+		
+
+		}
+		
+	</style>
+</head>
+<body style="background: #F5B7B1 ">
+	<div class="abc" id="mens_container" container="men" ondrop="productOnDrop(event)" ondragover="productDragged(event)">
+		Mens
+		
+	</div>
+	<div  class="abc" id="womens_container" container="women" ondrop="productOnDrop(event)" ondragover="productDragged(event)">
+		Womens
+		
+	</div>
+
+    <div  class="abc" id="kids_container" container="kid" ondrop="productOnDrop(event)" ondragover="productDragged(event)">
+    	Kids
+		
+	</div>
+	<div >
+		<mens>Men's clothing</mens>
+		<img id="menProduct1" category="men" src="https://sointheknow.com/wp-content/uploads/2019/04/20-best-mens-clothing-stores-online-featuredimage.jpg" ondragstart="draggingStarted(event)">
+		<img id="menProduct2" category="men" src="https://2j6jnda3hor2rfqci2oskova-wpengine.netdna-ssl.com/wp-content/uploads/2019/04/Yoox-Mens-Clothing-Store-Online.jpg" ondragstart="draggingStarted(event)">
+		<img id="menProduct3" category="men" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/affordableonline-1594998657.jpg?crop=0.502xw:1.00xh;0.251xw,0&resize=640:*" ondragstart="draggingStarted(event)">
+		<img id="menProduct4" category="men" src="https://images-na.ssl-images-amazon.com/images/I/41CnGkFDZlL._AC._SR240,240.jpg" ondragstart="draggingStarted(event)">
+		<img id="menProduct5" category="men" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBunCb9XxMCxZFDggd6LzCpDkTJtJHgvm59w&usqp=CAU" ondragstart="draggingStarted(event)">
+	</div>
+	<div >
+		<womens>Women's clothing</womens>
+		<img id="womenProduct1" category="women" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgEaCBUBs5t2SYFAnQhLpAA-deWTCCJZGUrQ&usqp=CAU" ondragstart="draggingStarted(event)">
+		<img id="womenProduct2" category="women" src="https://res.cloudinary.com/trunk-club/image/upload/f_auto,q_auto/v1598971712/public_site/2020/Womens/Fall/TC_20098_Fall_Womens_LP_Header_Mobile.jpg" ondragstart="draggingStarted(event)">
+		<img id="womenProduct3" category="women" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCDYlJtWA2hUoUMISVHI2A8wwzGToCR5Mf-w&usqp=CAU" ondragstart="draggingStarted(event)">
+		<img id="womenProduct4" category="women" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNJb5KVE7Ob0051s2t41HM0Ossrut02DRlyw&usqp=CAU" ondragstart="draggingStarted(event)">
+		<img id="womenProduct5" category="women" src="https://jcpenney.scene7.com/is/image/jcpenneyimages/dresses-3c182054-804c-4777-b3f6-3632e496c148?scl=1&qlt=75" ondragstart="draggingStarted(event)">
+	</div>
+	<div>
+		<kids>Kid's clothing</kids>
+		<img id="kidsProduct1" category="kid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU8IWvSJ0guWZgM6yuMNXpuwpRxMVpI_018w&usqp=CAU" ondragstart="draggingStarted(event)">
+		<img id="kidsProduct2" category="kid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVEmy6JsAGqubbE4xNKUqi_CjLBAQ_STtmlQ&usqp=CAU" ondragstart="draggingStarted(event)">
+		<img id="kidsProduct3" category="kid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwpMUDj9bYMGsNDDhcuP7v2t6ZomNQXvviVQ&usqp=CAU" ondragstart="draggingStarted(event)">
+		<img id="kidsProduct4" category="kid" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBKoMO9ranHwkJPBUfxMb7y9wqKqierpWwtw&usqp=CAU" ondragstart="draggingStarted(event)">
+		<img id="kidsProduct5" category="kid" src="https://i.pinimg.com/originals/e1/2d/cd/e12dcde0fd436da78a08bc719cfc6381.jpg" ondragstart="draggingStarted(event)">
+	</div>
+
+	<script type="text/javascript">
+		
+
+	var elementId='';
+
+		function draggingStarted(event)
+		{
+			elementId=event.target.getAttribute("id");
+
+		}
+        
+		function productOnDrop(event)
+		{
+			
+				elementId="#" + elementId;
+			var imgElement=document.querySelector(elementId);
+			var newImgTag=document.createElement("img");
+			newImgTag.setAttribute("src",imgElement.getAttribute('src'));
+			event.target.append(newImgTag);
+			event.preventDefault();
+			
+			
+		 }
+		
+		
+
+		function productDragged(event)
+		{
+			event.preventDefault();
+		}
+	</script>
+
+
+</body>
+</html>

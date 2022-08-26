@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		class studentDetails
+		{
+			constructor(obj)
+			{
+				this.name=obj.name;
+				this.age=obj.age;
+				this.loc=obj.loc;
+			}
+			displayData()
+			{
+				console.log("name is"+this.name);
+				console.log("age is"+this.age);
+				console.log("location is"+this.loc);
+			}
+		}
+
+		var data1={name:"kalyani", age:"20", loc:"amt"}
+		 var s1=new studentDetails(data1);
+		 s1.displayData();
+
+		 var data2={name:"abhi", age:"21", loc:"amt"}
+		 var s2=new studentDetails(data2);
+		 s2.displayData();
+
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sum of individual square of given number</title>
+</head>
+<body>
+<script type="text/javascript">
+	var i=prompt("enter number");
+	i=parseInt(i);
+	var rem;
+	var sum=0;
+
+	while(i>0)
+	{
+
+		rem=i%10;
+		rem=rem*rem;
+		sum=sum+rem;
+		i=i/10;
+		i=parseInt(i);
+
+	}
+	console.log(sum);
+ 
+</script>
+</body>
+</html>

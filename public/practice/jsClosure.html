@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js closure</title>
+	<style type="text/css">
+			.container {
+				border: 1px solid;
+				width: 500px;
+				margin: 30px auto;
+				padding: 50px;
+			}
+			li {
+				list-style: none;border: 1px solid;
+				margin: 5px;
+				padding: 5px;
+			}
+		</style>
+		<script type="text/javascript" src="mathUtilOperations.js"></script>
+	
+</head>
+<body>
+	<div class="container">
+		<ul>
+			<li>First value:
+		     <input type="number" id="fval">
+		    </li>
+		    <li> Second value:
+		    <input type="number" id="sval">
+	        </li>
+	        <li>
+	        	<input type="button" value="Addition" onclick="doOperation('sum')">
+	        	<input type="button" value="Subtraction" onclick="doOperation('sub')">
+	        	<input type="button" value="Multiplication" onclick="doOperation('mul')">
+	        	<input type="button" value="Division" onclick="doOperation('div')">
+	        </li>
+	        <li>
+	        	The <span id="oblock"></span> is <span id="rblock"></span>
+	        </li>
+	        <li>
+	        	count <span id="counter"></span>
+	        </li>
+	    </ul>
+	</div>
+
+	<script type="text/javascript">
+		
+		
+		var count=0;
+
+		function doOperation(type)
+		{
+			count++;
+			 var fval=document.querySelector("#fval").value;
+			 fval=parseInt(fval);
+			 var sval=document.querySelector("#sval").value;
+			 sval=parseInt(sval);
+			 var result=0;
+
+			 switch(type)
+			 {
+			 	case 'sum':
+			 	result = Abc.doAddition(fval,sval);
+			 	break;
+
+			 	case 'sub':
+			 	result = Abc.doSubtraction(fval,sval);
+			 	break;
+
+			 	case 'mul':
+			 	result = Abc.doMultiplication(fval,sval);
+			 	break;
+
+			 	case 'div':
+			 	result = Abc.doDivision(fval,sval);
+			 	break;
+			 }
+
+			 document.querySelector("#oblock").innerText=type;
+			 document.querySelector("#rblock").innerText=result;
+			 document.querySelector("#counter").innerText=count;
+			 sample();
+		}
+		function sample()
+		{
+			console.log("hello good morning")
+		}
+
+
+	</script>
+	
+</body>
+</html>

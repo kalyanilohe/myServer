@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5 canvas tag</title>
+	<style type="text/css">
+		canvas
+		{
+			height: 500px;
+			width: 800px;
+			border: 1px solid;
+		}
+		img
+		{
+			height: 100px;
+			width: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div>demonstrating HTML5 canvas tag</div>
+	<canvas id="mycanvas">
+		<script type="text/javascript">
+			var convasElement=document.querySelector("#mycanvas");
+			var ctx=convasElement.getContext("2d"); //ctx is the context object
+			/*var x=5; //defining x and y axis size
+			var y=5;
+			setInterval(function(){
+				ctx.beginPath();
+			    ctx.rect(x,y,80,50);
+			    ctx.stroke();
+			    x=x+5;
+			    y=y+5;
+
+			},1000);*/
+
+			ctx.fillStyle='red';    //drawing rectangle
+			ctx.fillRect(0,0,50,30); 
+
+			ctx.moveTo(160,10);    //drawing line
+			ctx.lineTo(100,120);
+			ctx.stroke();
+
+			ctx.beginPath();                 //drawing circle
+			ctx.arc(95,50,40,0,2* Math.PI);
+			ctx.stroke();
+
+			ctx.fillText("good morning",170,40);
+
+			ctx.font="30px Arial";
+			ctx.strokeText("hello all",80,80);	
+			
+		</script>
+		
+	</canvas>
+
+</body>
+</html>

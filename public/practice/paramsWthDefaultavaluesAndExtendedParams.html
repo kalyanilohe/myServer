@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		var sum=0;                               
+		
+		/*var addValues=(a=10,b=78,c=90) =>{        //default values
+			sum=a+b+c;
+			console.log("sum is"+sum);
+		}
+		addValues(78,90);*/
+
+		function addValues(a,b, ...temp){
+			console.log(temp);
+			sum=a+b;
+			for (let i = 0; i < temp.length; i++) {
+					sum += temp[i];
+				}
+			console.log("sum" +sum);
+		}
+		addValues(89,88,67,77,89,90,56,89);
+
+	</script>
+
+</body>
+</html>

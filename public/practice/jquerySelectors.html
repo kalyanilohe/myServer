@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery selectors</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<style type="text/css">
+		.highlight
+		{
+			background: purple;
+			padding: 5px;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+
+<div>
+	<input type="text" name="">
+	<input type="text" name="">
+	<input type="button" value="click" onclick="applychanges()">
+</div>
+
+<div>
+	<div id="test">
+		<span>RAJ</span>
+	</div>
+	<div id="sample">
+		<span>Teena</span>
+	</div>
+</div>
+
+<div class="abc" id="pqr">
+	hii hello
+</div>
+
+<ul>
+	<li>Item1</li>
+	<li>Item1</li>
+	<li>Item1</li>
+	<li>Item1</li>
+	<li>Item1</li>
+</ul>
+<div id="block"></div>
+
+
+	<script type="text/javascript">
+		function applychanges()
+	{
+		$("li:odd").addClass("highlight");   //li in the odd posn
+	}
+
+		$("input").css("background","pink");
+		$("input[type=button]").css("background","#ccc");
+		$("div #test span").css("font-size","25");
+		$("div#pqr.abc").css("background","red");
+		$("li:lt(2)").css("color","red");    //any li lesser than the position 2
+		$("li:gt(2)").css("color","blue");    //any li greater than the position 2
+
+        $("li").attr("sample","test") ;  //methods to set and remove attributes
+          $("li").removeAttr("sample") ;
+
+
+
+		var spantag=$("<span></span>").html("good morning");
+
+		$("#block").after(spantag);
+		
+		
+	</script>
+
+</body>
+</html>

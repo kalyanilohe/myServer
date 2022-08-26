@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>class in js</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function StudentData(name,age,marks)
+		{
+			this.name=name;
+			this.age=age;
+			this.marks=marks;
+			this.getTotal= function(){
+				this.total=0;
+				for(var i=0;i<this.marks.length;i++){
+					this.total+=this.marks[i];
+				}
+			};
+			this.display= function(){
+				this.getTotal();
+				console.log("student details");
+				console.log("name is"+this.name);
+				console.log("age is"+this.age);
+				console.log("total is"+this.total);
+
+			};
+		}
+
+
+		var obj1=new StudentData("raj",22,[56,78,90]);
+		obj1.display();
+
+		var obj2=new StudentData("kalyani",23,[89,78,56]);
+		obj2.display();
+	</script>
+
+</body>
+</html>

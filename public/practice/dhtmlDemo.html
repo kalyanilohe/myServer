@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DHTML demo</title>
+</head>
+<body>
+<div>Demonstrating DHTML</div>
+<span>demo demo demo</span>
+<ul>
+	<li></li>
+</ul>
+<p id="container"></p>
+
+<script type="text/javascript">
+	var divElement=document.createElement('div');
+	divElement.setAttribute("class","unique");
+	divElement.setAttribute("id","test");
+	divElement.setAttribute("name","sample");
+	divElement.style.color='red';
+	divElement.style.border='2px solid';
+	divElement.style.background="pink";
+	divElement.innerHTML="GOOD MORNING ALL";
+	console.log(divElement);
+
+	document.getElementById("container").append(divElement);
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sum of array element</title>
+</head>
+<body>
+<script type="text/javascript">
+	var numbers=[];
+	var sum=0;
+	var range=prompt("enter range of array");
+	range=parseInt(range);
+
+	for(var i=0;i<=range;i++)
+	{
+	numbers[i]=prompt("enter value of"+i);
+	numbers[i]=parseInt(numbers[i]);
+     sum=numbers[i]+sum;
+    }
+    console.log(sum);
+
+</script>
+</body>
+</html>

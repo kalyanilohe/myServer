@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>media queries</title>
+	<style type="text/css">
+		.header, .footer {
+				border: 1px solid;
+				text-align: center;
+				margin: 10px;
+				padding: 10px;
+
+			}
+			.footer {
+				position: absolute;
+				left: 5px;
+				right: 5px;
+				bottom: 5px;
+				font-size: 12px;
+			}
+
+		.content {
+				width: 900px;
+				border: 2px;
+				margin: 40px;
+				background: pink;
+				font-size: 20px;
+				font-weight: bold;
+				text-align: center;
+				height: 120px;
+			}
+			.adblock {
+				background: grey;
+				width: 200px;
+				height: 120px;
+				margin: 5px;
+				padding: 10px;
+				position: absolute;
+				bottom: 120px;
+				right: 10px;
+				color: #fff;
+			}
+
+			@media only screen and (max-width: 600px)
+			{
+				.adblock
+				{
+					display: none;
+				}
+				.content
+				{
+					width: 200px;
+				}
+
+			}
+			@media only screen and (max-width: 780px)
+			{
+				.adblock
+				{
+					display: none;
+				}
+				.content
+				{
+					width: 350px;
+				}
+			}
+	</style>
+</head>
+<body>
+	<div class="header">Welcome to page!!!</div>
+	<div class="content">About to show content</div>
+	<div class="adblock">
+		<marquee>adds been displayed</marquee>
+	</div>
+	<div class="footer">@Copy rights 2021</div>
+
+</body>
+</html>

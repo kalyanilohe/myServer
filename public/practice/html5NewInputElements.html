@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>html5 input elements</title>
+	<style type="text/css">
+		ul
+		{
+			border: 3px solid;
+			width: 500px;
+			margin: 20px auto;
+			padding: 10px;
+			background: #ccc;
+
+		}
+		li
+		{
+			list-style: none;
+			border: 1px solid;
+			padding: 5px;
+			margin: 5px;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			User name:<input type="text" name="">
+		</li>
+		<li>
+			User age:<input type="number" name="">
+		</li>
+		<li>
+			fav color:<input type="color" name="">
+		</li>
+		<li>
+			date:<input type="date" name="">
+		</li>
+		<li>
+			Meeting:<input type="datetime-local" name="">
+		</li>
+		<li>
+			price range:<input type="range" name="" min="1000" max="30000" onchange="showValue()" id="pricebar">
+			<span id="value"></span>
+		</li>
+		<li>
+			phone no:<input type="tel" name="">
+		</li>
+		<li>
+			Upload pic:<input type="file" name="">
+		</li>
+		<li>
+			search key:<input type="search" name="">
+		</li>
+		
+	</ul>
+<script type="text/javascript">
+	function showValue()
+	{
+		document.querySelector("#value").innerHTML=document.querySelector("#pricebar").value;
+
+	}
+</script>
+</body>
+</html>

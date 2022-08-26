@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>iterating json with array</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var data={
+		name: "kalyani",
+		age:23,
+		gender:"female",
+		phonen0:[4546875,5678,84578789],
+		adress:{
+			streetname:"abc road",
+			roadno:778,
+			pin:57658
+		}
+	}
+	for(var key in data){
+		console.log(key);
+		console.log(data[key]);
+		console.log(typeof(data[key]));
+		if(typeof(data[key])=="object" && data[key].length){
+			for(var i=0;i<=data[key].length;i++){
+				console.log(data[key][i]);
+			}
+		}else if(typeof(data[key])=="object"){
+			for(var temp in data[key]){
+				console.log(temp);
+				console.log(data[key][temp]);
+			}
+		}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inheritance between two dynamic objects</title>
+</head>
+<body>
+<script type="text/javascript">
+	function sellerDetails(obj)
+	{
+		this.sname=obj.sname;
+		this.s_adress=obj.s_adress;
+	}
+	function bookDetails(obj)
+	{
+		this.name=obj.name;
+		this.price=obj.price;
+		this.no_of_pages=obj.no_of_pages;
+		this.displayData=function(){
+			console.log("seller name"+this.sname);
+			console.log("seller adress is"+this.s_adress);
+			console.log("book name is"+this.name);
+			console.log("book price is"+this.price);
+			console.log("number of pages"+this.no_of_pages);
+		}
+	}
+	bookDetails.prototype=new sellerDetails({sname:"A.B.pathak", "s_adress":"Hyderabad"});
+	var b1=new bookDetails({"name":"Three mistakes of my life","price":"3000","no_of_pages":"500"});
+	b1.displayData();
+</script>
+</body>
+</html>

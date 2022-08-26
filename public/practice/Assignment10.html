@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>student details using js</title>
+</head>
+<body>
+<script type="text/javascript">
+	function userInfo()
+	{
+	  var stud_name,stud_age, stud_gender, m1, m2, m3;
+	  stud_name=prompt("enter name");
+	  stud_age=prompt("enter age");
+	  stud_gender=prompt("enter gender");
+	  m1=prompt("enter marks 1");
+	  m1=parseInt(m1);
+	  m2=prompt("enter marks 2");
+	  m2=parseInt(m2);
+	  m3=prompt("enter marks 3");
+	  m3=parseInt(m3);
+
+      displayData(stud_name,stud_age,stud_gender,m1,m2,m3);
+
+	}
+	  
+	
+	 function totalAvg(m1,m2,m3) 
+	{
+	total=m1+m2+m3;
+	var avg=total/3;
+	return avg;
+
+	
+    }
+
+    function displayData(name,age,gender,m1,m2,m3)
+    {
+    var avg=totalAvg(m1,m2,m3);
+
+	console.log("student details",);
+	console.log("student name" , name);
+	console.log("student age" , age);
+	console.log("student gender" ,gender);
+	console.log("average" , avg);
+
+	grade(avg);
+
+
+	}
+
+	function grade(avg)
+	{
+		if(avg>40)
+	{
+		console.log("student got passed");
+		if(avg>90){
+			console.log("student got distinction");
+		}
+	}else
+	{
+		console.log("student got failed");
+	}
+
+    }
+	userInfo();
+	
+	
+</script>
+</body>
+</html>

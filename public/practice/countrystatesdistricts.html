@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>country state district</title>
+	<style type="text/css">
+		.container
+		{
+			border: 2px solid #C0392B;
+			background: #F1948A;
+			margin: 40px auto;
+			height: 500px;
+			width: 600px;
+			border-radius: 14px;
+		}
+		h1
+		{
+			text-align: center;
+			color: #B51307;
+		}
+		li
+		{
+			list-style: none;
+			color: #B51307;
+			margin: 20px;
+			padding: 10px;
+		}
+		label
+		{
+			padding: 5px;
+		}
+		.btn
+		{
+			border: 2px solid #B51307;
+			border-radius: 14px;
+			font-weight: bold;
+			position: absolute;
+			left: 870px;
+			padding: 5px;
+			margin: 5px;
+			color: #B51307;
+			top:480px;
+		}
+		input,select
+		{
+			border-radius: 14px ;
+			color:#B51307;
+			margin: 5px;
+		}
+		#age_label
+		{
+			position: absolute;
+			left: 465px;
+		}
+		#u_age
+		{
+			position: absolute;
+			left: 545px;
+		}
+		#country_label
+		{
+			position: absolute;
+			left: 475px;
+			top: 260px;
+		}
+		#u_country
+		{
+			position: absolute;
+			left: 545px;
+			top: 260px;
+		}
+		#state_label
+		{
+			position: absolute;
+			left: 495px;
+			top:320px;
+		}
+		#u_state
+		{
+			position: absolute;
+			left: 545px;
+			top: 320px;
+		}
+		
+		
+		#dist_label
+		{
+			position: absolute;
+			left: 495px;
+			top: 380px;
+
+		}
+		#u_dist
+		{
+			position: absolute;
+			left: 545px;
+			top: 380px;
+
+		}
+	</style>
+</head>
+<body style="background: #F2D7D5 ">
+<div class="container" >
+	<h1>Student details</h1>
+	<ul>
+		<li>
+			<label id="name_label">Enter name:</label>
+			<input type="text" id="u_name">
+		</li>
+		<li>
+			<label id="age_label">Enter age:</label>
+			<input type="text" id="u_age">
+		</li>
+		<li>
+			<label id="country_label">Country:</label>
+			<select id="u_country" onchange="selectState()">
+				<option>Select..</option>
+				<option>India</option>
+				<option>Japan</option>
+				<option>America</option>
+			</select>
+		</li>
+		<li>
+			<label id="state_label">State:</label>
+			<select id="u_state" >
+				<option>Select..</option>
+			</select>
+		</li>
+		<li>
+			<label id="dist_label">Dist:</label>
+			<select id="u_dist" onclick="selectDist()">
+				<option>select..</option>
+			</select>
+		</li>
+		<li>
+			<input class="btn" type="button" value="submit">
+		</li>
+	</ul>
+</div>
+
+<script type="text/javascript">
+	function emptyStatesAndDistricts() //empty state and districts when country is changed
+	{
+		document.querySelector("#u_state").innerHTML = "<option>Select..</option>" 
+		document.querySelector("#u_dist").innerHTML= "<option>Select..</option>"
+	}
+	function selectState()
+	{
+		emptyStatesAndDistricts();
+		var country=document.querySelector("#u_country").value;
+		var indiaStates = 
+		   {
+				stInd1 : "Maharashtra",
+				stInd2 : "Telangana",
+				stInd3 : "Gujrat",
+				stInd4 : "Punjab",
+				stInd5 : "Tamil Nadu",
+			}
+		var japanStates = 
+		{
+			stJap1 : "Tohoku",
+			stJap2 : "kanto",
+			stJap3 : "chubu",
+			stJap4 : "chugoku",
+			stJap5 : "Shikolu"
+		}
+		var americaStates = 
+		{
+			stAme1: "California",
+			stAme2: "Texas",
+			stAme3: "Florida",
+			stAme4: "Georia",
+			stAme5: "Alaska"
+		}
+		if(country == "India")
+		{
+			for(var temp in indiaStates)
+			{
+				var opt = document.createElement("option");
+				document.querySelector("#u_state").append(opt);
+				opt.innerText = indiaStates[temp];	
+			}
+		}
+		
+		if(country == "Japan")
+		{
+			for(var temp in japanStates)
+			{
+				var opt = document.createElement("option");
+				document.querySelector("#u_state").append(opt);
+				opt.innerText = japanStates[temp];	
+			}
+		}
+		
+		if(country == "America")
+		{
+			for(var temp in americaStates)
+			{
+				var opt = document.createElement("option");
+				document.querySelector("#u_state").append(opt);
+				opt.innerText = americaStates[temp];	
+			}
+		}
+
+	}
+	function selectDist()
+	{
+		var state=document.querySelector("#u_state").value;
+		var maharashtraDist = {
+				maharashtraDist01 : "Amravati",
+				maharashtraDist01 : "Akola",
+				maharashtraDist01 : "Nasik",
+				maharashtraDist01 : "Akot",
+				maharashtraDist01 : "Yavatmal"
+			}
+		var  telangnaDist= {
+			telangnaDist01 : "Hyderabad",
+			telangnaDist02 : "Bhadrari",
+			telangnaDist03 : "Adilabad",
+			telangnaDist04 : "jangaon",
+			telangnaDist05 :  "Jagtial"
+		}
+		var gujratDist = {
+			gujratDist01:"Ahmedabad",
+			gujratDist02:"Amreli",
+			gujratDist03:"Anand",
+			gujratDist04:"Bharuch",
+			gujratDist05:"Aravalli"
+		}
+		var punjabDist= {
+			punjabDist01:"Amritsar",
+			punjabDist02:"Barnala",
+			punjabDist03:"Bathinda",
+			punjabDist04:"Ferozepur",
+			punjabDist05:"Faridkot"
+		}
+		var tamilNaduDist = {
+			tamilNaduDist01 : "Chennai",
+			tamilNaduDist02: "Kanchipuram",
+			tamilNaduDist03: "Chengalpattu",
+			tamilNaduDist04: "Cuddalore",
+			tamilNaduDist05: "Dindigul"
+
+		}
+
+		if(state == "Maharashtra")
+		{
+			for(var temp in maharashtraDist)
+			{
+				var opt = document.createElement("option");
+				document.querySelector("#u_dist").append(opt);
+				opt.innerText = maharashtraDist[temp];	
+			}
+		}
+		if(state == "Telangana")
+		{
+			for(var temp in telangnaDist)
+			{
+				var opt = document.createElement("option");
+				document.querySelector("#u_dist").append(opt);
+				opt.innerText = telangnaDist[temp];	
+			}
+		}
+		if(state == "Gujrat")
+		{
+			for(var temp in gujratDist)
+			{
+				var opt = document.createElement("option");
+				document.querySelector("#u_dist").append(opt);
+				opt.innerText = gujratDist[temp];	
+			}
+		}
+		if(state == "Punjab")
+		{
+			for(var temp in punjabDist)
+			{
+				var opt = document.createElement("option");
+				document.querySelector("#u_dist").append(opt);
+				opt.innerText = punjabDist[temp];	
+			}
+		}
+		if(state == "Tamil Nadu")
+		{
+			for(var temp in tamilNaduDist)
+			{
+				var opt = document.createElement("option");
+				document.querySelector("#u_dist").append(opt);
+				opt.innerText = tamilNaduDist[temp];	
+			}
+		}
+
+		var tohokuDist = {
+				tohokuDist01 : "Aomori",
+				tohokuDist02 : "Miyagi",
+				tohokuDist03 : "Iwate",
+				tohokuDist04 : "Fukushima"
+				}
+		var  kantoDist= {
+			kantoDist01 : "Tokyo",
+			kantoDist02 : "Niigata",
+			kantoDist03 : "Shizuoka",
+			kantoDist04 : "Nagano"
+		}
+		var chubuDist = {
+			chubuDist01:"Toyama",
+			chubuDist02:"Ishikawa",
+			chubuDist03:"Fukui",
+			chubuDist04:"yamanashi",
+			chubuDist05:"Aravalli"
+		}
+		var chugokuDist= {
+			chugokuDist01:"Hiroshima",
+			chugokuDist02:"Yamaguchi",
+			chugokuDist03:"Shimane",
+			chugokuDist04:"Tottori"
+		}
+		var shukoluDist = {
+			shukoluDist01 : "Gunma",
+			shukoluDist02: "Hokkaido"
+		}
+
+		if(state == "Tohoku")
+		{
+			for(var temp in tohokuDist)
+			{
+				var opt = document.createElement("option");
+				document.querySelector("#u_dist").append(opt);
+				opt.innerText = tohokuDist[temp];	
+			}
+		}
+		if(state == "kanto")
+		{
+			for(var temp in kantoDist)
+			{
+				var opt = document.createElement("option");
+				document.querySelector("#u_dist").append(opt);
+				opt.innerText = kantoDist[temp];	
+			}
+		}
+		if(state == "chubu")
+		{
+			for(var temp in chubuDist)
+			{
+				var opt = document.createElement("option");
+				document.querySelector("#u_dist").append(opt);
+				opt.innerText = chubuDist[temp];	
+			}
+		}
+		if(state == "chugoku")
+		{
+			for(var temp in chugokuDist)
+			{
+				var opt = document.createElement("option");
+				document.querySelector("#u_dist").append(opt);
+				opt.innerText = chugokuDist[temp];	
+			}
+		}
+		if(state == "Shikolu")
+		{
+			for(var temp in shukoluDist)
+			{
+				var opt = document.createElement("option");
+				document.querySelector("#u_dist").append(opt);
+				opt.innerText = shukoluDist[temp];	
+			}
+		}
+
+		var californiaDist = {
+				californiaDist01 : "Acalanes",
+				californiaDist02 : "Ackerman",
+				californiaDist03 : "Adelanto",
+				californiaDist04 : "Alameda",
+				californiaDist05 : "Abany"
+			}
+		var  texasDist= {
+			texasDist01 : "Dallas",
+			texasDist02 : "Harris",
+			texasDist03 : "Abbott ISD",
+			texasDist04 : "Abernathy",
+			texasDist05 :  "Abilene"
+		}
+		var floridaDist = {
+			floridaDist01:"Ahmedabad",
+			floridaDist02:"Amreli",
+			floridaDist03:"Anand",
+			floridaDist04:"Bharuch",
+			floridaDist05:"Aravalli"
+		}
+		var georiaDist= {
+			georiaDist01:"Baker",
+			georiaDist02:"Alachua",
+			georiaDist03:"Hendry",
+			georiaDist04:"Clewiston",
+			georiaDist05:"Ahfachkee"
+		}
+		var alaskaDist = {
+			alaskaDist01 : "Aleutian",
+			alaskaDist02: "Chatham",
+			alaskaDist03: "Bristol",
+			alaskaDist04: "Anchorage",
+			alaskaDist05: "Bering"
+
+		}
+
+		if(state == "California")
+		{
+			for(var temp in californiaDist)
+			{
+				var opt = document.createElement("option");
+				document.querySelector("#u_dist").append(opt);
+				opt.innerText = californiaDist[temp];	
+			}
+		}
+		if(state == "Texas")
+		{
+			for(var temp in texasDist)
+			{
+				var opt = document.createElement("option");
+				document.querySelector("#u_dist").append(opt);
+				opt.innerText = texasDist[temp];	
+			}
+		}
+		if(state == "Florida")
+		{
+			for(var temp in floridaDist)
+			{
+				var opt = document.createElement("option");
+				document.querySelector("#u_dist").append(opt);
+				opt.innerText = floridaDist[temp];	
+			}
+		}
+		if(state == "Alaska")
+		{
+			for(var temp in alaskaDist)
+			{
+				var opt = document.createElement("option");
+				document.querySelector("#u_dist").append(opt);
+				opt.innerText = alaskaDist[temp];	
+			}
+		}
+		if(state == "Georia")
+		{
+			for(var temp in georiaDist)
+			{
+				var opt = document.createElement("option");
+				document.querySelector("#u_dist").append(opt);
+				opt.innerText = georiaDist[temp];	
+			}
+		}
+
+	}
+</script>
+</body>
+</html>

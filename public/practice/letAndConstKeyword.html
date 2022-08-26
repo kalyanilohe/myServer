@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	/*const a=10;     //error bcz const can not be changed
+	a=20;
+	console.log(a);*/
+	function display(){
+		var sum=0;
+		for(let i=0; i<5;i++){  //block scope using let
+		console.log(i);
+		}
+		sum=sum+i;
+		console.log(sum);    //error i not defined
+	}
+	display();
+</script>
+</body>
+</html>

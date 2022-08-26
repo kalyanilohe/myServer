@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>user defined exeption</title>
+	<style type="text/css">
+		li
+		{
+			list-style: none;
+			background: #ccc;
+			padding: 5px;
+			margin: 5px;
+			border: 1px solid;
+			width: 360px;
+		}
+		ul
+		{
+			width: 380px;
+			margin: 10px auto;
+		}
+		.errBlock
+		{
+			font-size: 15px;
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			Enter user name:
+			<input type="text" id="uname">
+			<div class="errBlock" id="errmsg1"></div>
+		</li>
+		<li>
+			Enter user age:
+			<input type="text" id="uage">
+			<div class="errBlock" id="errmsg2"></div>
+		</li>
+		
+		<li>
+			Gender:
+			<input type="radio" name="gender" checked="true" value="female">Female
+			<input type="radio" name="gender" value="male">Male
+		</li>
+		<li>
+			<input type="button" value="register" onclick="registerDetails()">
+		</li>
+	</ul>
+
+	<script type="text/javascript">
+		function registerDetails()
+		{
+			var data={};
+			data.name=document.querySelector("#uname").value;
+			try{
+			     if(data.name==""){
+			     	throw "name_invalid"
+			     }
+			     data.age=document.querySelector("#uage").value;
+			     data.age=parseInt(data.age);
+			     if(data.age<20){
+			     	throw "age_invalid"
+			     }
+			    }
+			    catch(err){
+			    	switch(err){
+			    		case "name_invalid":
+			    		    document.querySelector("#errmsg1").innerHTML="Name is mandatory";
+			    		    break;
+			    		case "age_invalid":
+			    		     document.querySelector("#errmsg2").innerHTML="Invalid age";
+			    		     break;
+			                  }
+			              }
+			data.gender=document.querySelector("input[name=gender]:checked").value;
+			console.log(data);
+		}
+	</script>
+
+</body>
+</html>

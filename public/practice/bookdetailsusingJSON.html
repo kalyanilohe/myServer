@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>book details using json</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var bookDetails={
+		bookname: "harry potar",
+		price: 1500,
+		discount: 20%,
+		authornames: ["kalyani","rahul","abhi"],
+		publishers:"xyx",
+		numberofPages:500,
+	}
+
+	for(var i=0;i<bookDetails.authornames.length;i++)
+	{
+		console.log("author names are"+bookDetails.authornames[i]);
+	}
+
+	
+	console.log("book name is"+bookDetails.bookname);
+	console.log("book price is"+bookDetails.price);
+	console.log("discount is"+bookDetails.discount);
+	console.log("publisher name is"+ bookDetails.publishers);
+	console.log("number of Pages"+bookDetails.numberofPages);
+
+</script>
+</body>
+</html>

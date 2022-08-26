@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>single level inheritance between static objects</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+		var collegeDetails={
+			city:"amt",
+			clgname:"HVPM COET",
+			clgadress:"amba devi road",
+			fees:"45000",
+		}
+		
+		var studentDetails1={
+			name:"kalyani",
+			age:"23",
+			gender:"female",
+			displayDetails:function(){
+				console.log("student details");
+				console.log("student name"+this.name);
+				console.log("student age"+this.age);
+				console.log("gender is"+this.gender);
+				console.log("city name"+this.city);
+				console.log("college name"+this.clgname);
+				console.log("college adress"+this.clgadress);
+				console.log("fees"+this.fees);
+			}
+		}
+
+		studentDetails1.__proto__=collegeDetails;
+		studentDetails1.displayDetails();
+
+
+		var studentDetails2={
+			name:"abhi",
+			age:"23",
+			gender:"male",
+			displayDetails:function(){
+				console.log("student details");
+				console.log("student name"+this.name);
+				console.log("student age"+this.age);
+				console.log("gender is"+this.gender);
+				console.log("city name"+this.city);
+				console.log("college name"+this.clgname);
+				console.log("college adress"+this.clgadress);
+				console.log("fees"+this.fees);
+			}
+		}
+
+		studentDetails2.__proto__=collegeDetails;
+		studentDetails2.displayDetails();
+	</script>
+
+</body>
+</html>

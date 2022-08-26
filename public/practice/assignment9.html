@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>prime numbers from 1 to 100</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+    for (var i = 1; i <= 100; i++)  
+{
+    prime = true;
+    for (counter=2;counter<i;counter++)
+    {
+        if (i % counter === 0)
+        {
+            prime = false;
+        }
+    }
+    if (prime){
+        console.log(i);
+    }
+}
+
+         
+		
+	</script>
+ 
+
+</body>
+</html>

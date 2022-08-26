@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>prime number in array</title>
+</head>
+<body>
+<script type="text/javascript">
+	var numbers=[];
+	var counter=0;
+	var range=prompt("enter range of array");
+	range=parseInt(range);
+
+	for(var i=0;i<=range;i++)
+	{
+	numbers[i]=prompt("enter value of"+i);
+	numbers[i]=parseInt(numbers[i]);
+  }
+
+    for (var i = 1; i <= range; i++)  
+{
+    prime = true;
+    for (counter=2;counter<i;counter++)
+    {
+        if (numbers[i] % counter === 0)
+        {
+            prime = false;
+        }
+    }
+    if (prime){
+        console.log(numbers[i]);
+    }
+}
+
+</script>
+</body>
+</html>

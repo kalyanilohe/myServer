@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>inheritance between static and dynamic objects</title>
+	<style type="text/css">
+		ul
+		{
+			border: 2px solid;
+			margin: 2px auto;
+			width: 400px;
+			padding: 5px;
+
+		}
+		li
+		{
+			list-style: none;
+			border: 1px solid #ccc;
+			padding: 10px;
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>
+			<h4 style="text-align: center;">ABC School registration</h4>
+		</li>
+		<li>
+			student name:<input type="text" id="sname">
+		</li>
+		<li>
+			student age:<input type="text" id="sage">
+		</li>
+		<li>
+			country:
+			<select id="scountry">
+				<option>India</option>
+				<option>USA</option>
+				<option>Japan</option>
+			</select>
+		</li>
+		<li>
+			<input type="button" value="Register" onclick="doRegister()">
+		</li>
+	</ul>
+
+	<script type="text/javascript">
+
+		var schoolDetails={
+		  collegename:"ABC school",
+		  rating:"9/10",
+		  clgroad:"amba devi road"
+		}
+		function doRegister()
+		{
+		  var data=Object.create(schoolDetails);
+		 
+		  data.name=document.querySelector("#sname").value;
+		   data.age=document.querySelector("#sage").value;
+		   data.country=document.querySelector("#scountry").value;
+		   data.displayData=function(){
+		   	console.log("student name"+this.name);
+		   	console.log("student age"+this.age);
+		   	console.log("student country"+this.country);
+		   	console.log("college name"+this.collegename);
+		   	console.log("rating"+this.rating);
+		   	console.log("college road name"+this.clgroad);
+		   }
+		  data.displayData();
+		}
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>json object with methods using this operator</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var studInfo=
+		{
+			name:"kalyani",
+			age:25,
+			marks:[67,56,89,90,56],
+			gender:"female",
+			getTotalAndAvg:function()
+			{
+				this.total=0;
+				this.avg=0;
+				for(var i=0;i<this.marks.length;i++)
+				{
+					this.total+=this.marks[i];
+				}
+				this.avg=this.total/this.marks.length;
+			},
+			getGrade:function()
+			{
+				this.grade='';
+				if(this.avg>=40)
+				{
+					this.grade="passed";
+				}else
+				{
+					this.grade="failed";//here in all over "this" operator is used instead of object name(studInfo)
+				}
+			}
+		};
+		studInfo.displayData=function()
+		{
+			studInfo.getTotalAndAvg();
+			studInfo.getGrade();
+			console.log("student details");
+			console.log("name is"+studInfo.name);
+			console.log("age is"+studInfo.age);
+			console.log("gender is"+studInfo.gender);
+			console.log("total marks is"+studInfo.total); 
+			console.log("avg is"+studInfo.avg);
+			console.log("grade is"+studInfo.grade); 
+		}
+		studInfo.displayData();
+
+		for(var temp in studInfo)
+		{
+			console.log(temp);
+		}
+	</script> 
+
+</body>
+</html>

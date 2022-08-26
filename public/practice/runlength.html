@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function encodeWord(word) {
+  let currentLetter, lastLetter, currentCount
+  let output = ''
+  
+  for (let i = 0; i < word.length; i++) {
+    if (typeof lastLetter === 'undefined') {
+      lastLetter = word[i];
+      currentCount = 1;
+      continue;
+    }
+    
+    if (word[i] !== lastLetter) {
+      
+      output += currentCount + lastLetter;
+      lastLetter = word[i];
+      currentCount = 1;
+     
+      continue;
+    }
+
+    currentCount++;
+  }
+  
+  console.log(output + (currentCount + lastLetter))
+  return (output + (currentCount + lastLetter))
+  
+}
+
+encodeWord('aabbbcaa')
+
+	</script>
+
+</body>
+</html>

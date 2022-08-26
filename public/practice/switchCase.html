@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>switch case</title>
+</head>
+<body>
+<script type="text/javascript">
+	var a=prompt("enter first value");
+	a=parseInt(a);
+
+	var b=prompt("enter second value");
+	b=parseInt(b);
+
+	var userSelection=prompt("select add,sub,mul or div");
+
+	var result=0;
+
+	switch(userSelection)
+	{
+		case "add":
+		result=a+b;
+		console.log("addition is"+result);
+		break;
+
+		case "sub":
+		result=a-b;
+		console.log("subtraction is"+result);
+		break;
+        
+        case "mul":
+		result=a*b;
+		console.log("multiplition is"+result);
+		break;
+
+		case "div":
+		result=a/b;
+		console.log("division is"+result);
+		break;
+
+	}
+</script>
+</body>
+</html>

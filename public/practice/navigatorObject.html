@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exploring navigator object</title>
+</head>
+<body>
+	<script type="text/javascript">
+		console.log(navigator);
+		/*if(navigator.vendor=='Google Inc.'){
+			alert("do chrome job")
+		}else{
+			alert("do other browser job")
+		}*/
+		navigator.geolocation.getCurrentPosition(function(point){
+           console.log(point.coords.latitude);
+            console.log(point.coords.longitude);
+		});
+	</script>
+
+</body>
+</html>

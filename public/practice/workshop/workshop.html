@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>workshop</title>
+	<link rel="stylesheet" type="text/css" href="workshop.css">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="workshop.js"></script>
+    <script type="text/javascript" src="handlebars-v4.7.6.js"></script>     
+</head>
+<body>
+	<input type="button" value="Load data" onclick="getData()">
+	<div class="container"></div>
+
+	<script id="productTemplate">
+		                                    //using handlebars API
+		<ul>
+			<li>Product name: {{name}}</li>
+			<li>Product price:{{price}}</li>
+			<li>Manufacturer: {{manufacturer}}</li>
+			<li><img src="{{image}}"/></li>
+		</ul>
+	</script>
+
+</body>
+</html>

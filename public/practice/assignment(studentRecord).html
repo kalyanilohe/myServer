@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>student record</title>
+	<link rel="stylesheet" type="text/css" href="sRecord.css">
+	<script src="sRecord.js" type="text/javascript"></script>
+</head>
+<body>
+	<div class="sDatafields" style="border-radius: 12px">
+
+		<ul>
+			
+			<li>
+				User name:<input class="distance" type="text" id="u_name">
+			</li>
+			<li>
+				Age:<input class="distance li2" type="number" id="u_age">
+			</li>
+			<li >
+				Gender: <input  type="radio" name="gender">Male
+				        <input  id="u_gender" type="radio" name="gender">Female
+			</li>
+			<li>
+				Country:
+				<select id="u_country" class="distance li2" >
+					<option>select</option>
+					<option>India</option>
+					<option>USA</option>
+					<option>Bagladesh</option>
+					<option>England</option>
+				</select>
+			</li>
+			<li>
+				<input class="add" type="button" value="ADD" onclick="addRow()">
+			</li>
+		</ul>
+	</div>
+
+	<div class="studentRecord">
+		
+   </div>
+
+</body>
+</html>

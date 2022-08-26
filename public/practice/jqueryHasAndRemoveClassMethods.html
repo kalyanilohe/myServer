@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<style type="text/css">
+		.block
+		{
+			border: 1px solid;
+			width: 250px;
+			height: 230px;
+			margin: 50px auto;
+			text-align: center;
+		}
+		.highlight
+		{
+			background: pink;
+		}
+	</style>
+</head>
+<body>
+	<div id="container" class="block" onclick="dochange()">
+	hello
+    </div>
+
+	<script type="text/javascript">
+		function dochange()
+		{
+			if($("#container").hasClass("highlight"))
+			{
+				$("#container").removeClass("highlight")
+
+			}else
+			{
+				$("#container").addClass("highlight")
+
+			}
+		}
+
+		
+	</script>
+
+</body>
+</html>

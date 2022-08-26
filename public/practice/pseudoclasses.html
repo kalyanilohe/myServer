@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>demonstrating pseudo classes</title>
+	<style type="text/css">
+		a:hover
+		{
+			text-decoration: none;
+		}
+       .first:focus
+       {
+       	color:red;
+       }
+       #second:active
+       {
+       	color:green;
+       }
+       div:first-child
+       {
+       	color:red;
+       }
+	</style>
+</head>
+<body>
+click on the 
+<a class="first" href="https://www.google.com/">google</a>to go to google.
+<br>
+click on the
+<a id="second" href="https://www.amazon.com/">amazon</a>to to to amazon.
+<div>
+	<div>1. item1</div>
+	<div>2. item2</div>
+	<div>3. item3</div>
+	<div>4. item4</div>
+</div>
+</body>
+</html>

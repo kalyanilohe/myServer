@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CRUD operation</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="CRUDOperation.js"></script>
+	<style type="text/css">
+		.container
+		{
+			border: 2px solid;
+			padding: 10px;
+			margin: 10px auto;
+			width: 500px;
+			background: #ccc;
+		}
+		li{
+			list-style: none;
+			padding: 5px;
+			margin: 5px;
+			border: 1px solid;
+			background: #fff;
+		}
+		.btn-primary
+		{
+			margin-right: 7px;
+		}
+		.table
+		{
+			width: 700px;
+			margin: 10px auto;
+		}
+		
+	</style>
+</head>
+<body>
+	<ul class="container">
+		<li>
+			Enter Name :<input type="text" id="uname">
+		</li>
+		<li>
+			Enter Age :<input type="number" id="uage">
+		</li>
+		<li>
+			Location :
+			<select id="uloc">
+				<option></option>
+				<option >India</option>
+				<option >America</option>
+				<option >Japan</option>
+				<option >England</option>
+			</select>
+		</li>
+		<li>
+			<input type="button" value="Register" onclick="registerDetails()">
+		</li>
+	</ul>
+
+	<table class="table table-bordered">
+		<thead class="thead-dark">
+			<tr>
+				<th>Sr.No.</th>
+				<th>Student Name</th>
+				<th>Age</th>
+				<th>Location</th>
+				<th>Operations</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+		</tbody>
+	</table>
+
+</body>
+</html>

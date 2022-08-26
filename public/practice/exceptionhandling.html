@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>exception handling</title>
+	<style type="text/css">
+		.wlcmsg
+		{
+			display: none;
+			text-align: center;
+			width: 400px;
+			background: #ccc;
+			height: 30px;
+			position: relative;
+			top:300px;
+			left: 450px;
+			padding: 10px;
+		}
+		.msgbox
+		{
+			margin: 50px auto;
+			border: 2px solid;
+			padding: 5px;
+			width: 400px;
+			height: 60px;
+			text-align: center;
+		}
+		
+	</style>
+</head>
+<body>
+	<input type="text" id="uname">
+	<input type="button" value="Enter" onclick="readname()">
+	<input type="button" value="CreateContainer" onclick="createContainer()">
+	<input type="button" value="show my task" onclick="showTask()">
+	<div class="container">
+		
+	</div>
+	<div class="wlcmsg">
+		
+	</div>
+	<script type="text/javascript">
+		var name;
+		function readname()
+		{
+			name=document.querySelector("#uname").value;
+		}
+		function createContainer()
+		{
+			var divTag=document.createElement("div");
+			divTag.setAttribute("id","msgbox");
+			divTag.setAttribute("class","msgbox");
+			document.querySelector(".container").append(divTag);
+		}
+		function showTask()
+		{
+			try{
+                document.querySelector("#msgbox").innerHTML="congratulations.you have won the task";
+               }catch(err)
+               {
+                  alert("Sorry! you have missed creating container");
+               }finally{
+
+                   document.querySelector(".wlcmsg").innerHTML="Thanks Ms."+ name +" for using our page";
+                   document.querySelector(".wlcmsg").style.display='block';
+               }
+		}
+	</script>
+
+</body>
+</html>

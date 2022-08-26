@@ -1,0 +1,22 @@
+.progressCard
+	{
+      border:1px solid;
+      margin:10px;
+      padding: 10px;
+    }
+    li
+    {
+    	list-style: none;
+    	border: 1px solid;
+    	margin: 5px;
+    	padding: 5px;
+    }
+    .userDetails
+    {
+    	border: 2px;
+    	background: #ccc;
+    }
+    .marks
+    {
+    	margin: 5px;
+    }

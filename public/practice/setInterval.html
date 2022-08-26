@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>set interval</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	var counter=0;
+	var myinterval=setInterval(function(){
+		counter++
+		console.log("thanks for visiting");
+		console.log("plz visit again");
+
+		if(counter==3)
+		{
+			clearInterval(myinterval);
+		}
+	},3000);
+</script>
+</body>
+</html>

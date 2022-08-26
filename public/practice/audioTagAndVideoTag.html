@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5 audio and video tag</title>
+</head>
+<body>
+	<h2>Video sample</h2>
+<video id="uservideo" controls autoplay  poster="https://lh3.googleusercontent.com/proxy/gmbzaZiVivFwPsDQA8pYQAUovncY15MOH4dnRvGtx5kLS8Wt2Gi7w7BJxJRf8l0GGfTxrFhc9c3ApNK1_rEiBy6mmHqVkBFL7iTA-hk8IURbgTfxXxoNwjMuNNw">
+	<source id="mp4" src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4"> ;
+</video>
+
+<h2>Audio sample</h2>
+<audio controls="">
+	<source src="http://www.hubharp.com/web_sound/BachGavotteShort.mp3" type="audio/mpeg">
+</audio>
+
+<script type="text/javascript">
+	document.querySelector("#uservideo").addEventListener("volumechange",function(){
+		console.log("voume is changed");
+	});
+	document.querySelector("#uservideo").addEventListener("ended",function(){
+		console.log("video is ended");
+	document.querySelector("#uservideo").currentTime=0;
+	});
+
+</script>
+
+</body>
+</html>

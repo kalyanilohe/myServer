@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML5 semantic tags</title>
+	<style type="text/css">
+		.acontainer, .bcontainer, .ccontainer
+		{
+			border: 1px solid;
+			padding: 5px;
+			position: absolute;
+			left: 5px;
+			right: 5px;
+		}
+		.acontainer
+		{
+			top:5px;
+			text-align: center;
+		}
+		.bcontainer
+		{
+			top:40px;
+			bottom: 25px;
+		}
+		.ccontainer
+		{
+			bottom: 5px;
+			text-align: center;
+		}
+		.block1, .block2
+		{
+			border: 1px solid;
+			margin: 5px;
+			padding: 5px;
+			height: 500px;
+			float: left;
+			overflow: auto;
+		}
+		.block1
+		{
+			width: 30%;
+		}
+		.block2
+		{
+			width: 66%;
+		}
+		.content
+		{
+			height: 150px;
+			margin: 5px;
+			border: 1px solid;
+			list-style: none;
+		}
+	</style>
+</head>
+<body>
+	<header class="acontainer">
+		online shopping app
+		
+	</header>
+	<main class="bcontainer">
+		<aside class="block1">
+			<ul>
+				<li>Item1</li>
+				<li>Item1</li>
+				<li>Item1</li>
+				<li>Item1</li>
+				<li>Item1</li>
+				<li>Item1</li>
+				<li>Item1</li>
+				<li>Item1</li>
+				<li>Item1</li>
+				<li>Item1</li>
+			</ul>
+		</aside>
+		<aside class="block2">
+			<ul>
+				<section class="content">
+					<employeedetails>     
+						<div>name:kalyani</div> 
+						<div>age:23</div>
+						<div>gender:female</div>
+					</employeedetails>
+					<kalyani style="background: pink; display: block">hello</kalyani>
+				</section>
+				<section class="content"></section>
+				<section class="content"></section>
+				<section class="content"></section>
+				<section class="content"></section>
+				<section class="content"></section>
+				<section class="content"></section>
+				<section class="content"></section>
+				<section class="content"></section>
+				<section class="content"></section>
+				
+			</ul>
+		</aside>
+		
+	</main>
+	<footer class="ccontainer">
+		@copyrights 2021
+	</footer>
+
+</body>
+</html>

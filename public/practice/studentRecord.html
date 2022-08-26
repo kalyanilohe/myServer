@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>student record</title>
+	<link rel="stylesheet" type="text/css" href="studrecord.css">
+</head>
+<body>
+	<table>
+		<tr>
+			<td>
+				<!--html form-->
+				<form autocomplete="off" onsubmit="event.preventDefault(); onformSubmit();">
+					<div>
+					<label>User name:</label>
+					<input type="text" name="username" id="username">
+				    </div>
+				    <div>
+					<label>User age:</label>
+					<input type="text" name="userage" id="userage">
+				    </div>
+				    <div>
+					<label>gender:</label>
+					<input type="radio" name="gender" id="gender" >female
+					       <input type="radio" name="gender">male
+				    </div>
+				    <div>
+					<label>Country:</label>
+					 <select id="country">
+						<option>select</option>
+						<option>India</option>
+						<option>USA</option>
+						<option>china</option>
+					       </select>
+				    </div>
+				    <div class="form-action-button">
+				    	<input type="submit" value="Add">
+				    </div>
+				</form>
+			</td>
+			<td>
+				<!--table-->
+				<table class="list" id="employeelist">
+					<thead>
+						<tr>
+							<th>User Name</th>
+							<th>Age</th>
+							<th>Gender</th>
+							<th>Country</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						
+					</tbody>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+<script src="studrecord.js" type="text/javascript"></script>
+</body>
+</html>

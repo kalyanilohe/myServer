@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CRUD operation on student details</title>
+	<link rel="stylesheet" type="text/css" href="studinfo.css">
+	<script type="text/javascript" src="studinfo.js"></script>
+</head>
+<body>
+<ul>
+	<li>Student name:<input type="text" id="uname"></li>
+	<li>Student age:<input type="text" id="uage"></li>
+	<li>
+		Gender:
+		<input type="radio" name="gender" value="Female" checked="true">F
+		<input type="radio" name="gender" value="Male" >M
+	</li>
+	<li>
+		Country:<select id="ucountry">
+			<option></option>
+			<option id="ind">India</option>
+			<option id="us">USA</option>
+			<option id="jap">Japan</option>
+			
+		</select>
+	</li>
+	<li>
+		<input type="button" value="Add" onclick="addDetails()">
+	</li>
+</ul>
+
+<table cellpadding="5px" cellpadding="5px">
+	<thead>
+		<tr>
+			<th>Sr.No.</th>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Gender</th>
+			<th>Country</th>
+			<th>operations</th>
+		</tr>
+	</thead>
+	<tbody>
+		
+	</tbody>
+</table>
+</body>
+</html>

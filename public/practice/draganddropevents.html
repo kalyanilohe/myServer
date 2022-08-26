@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>drag and drop event</title>
+	<style type="text/css">
+		.container
+		{
+			border: 1px solid;
+			margin: 10px auto;
+			height: 400px;
+			width: 500px;
+		}
+		img
+		{
+			width: 110px;
+			height: 100px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="container" ondrop="productOnDrop(event)" ondragover="dragFinished(event)">
+		
+	</div>
+	<img src="https://elcopcbonline.com/photos/product/4/176/4.jpg" id="headset" ondragstart="draggingStarted(event)">
+	<img src="https://cdn2.stylecraze.com/wp-content/uploads/2013/11/1139-Best-Makeup-Products-For-Oily-Skin-%E2%80%93-Our-Top-18-1.jpg" id="makeup" ondragstart="draggingStarted(event)">
+
+	<script type="text/javascript">
+		var productId='';
+		function draggingStarted(event)
+		{
+			productId=event.target.getAttribute("id");
+			
+
+		}
+		function productOnDrop(event)
+		{
+			productId="#" + productId;
+			var imgElement=document.querySelector(productId);
+			var newImgTag=document.createElement("img");
+			newImgTag.setAttribute("src",imgElement.getAttribute('src'));
+			event.target.append(newImgTag);
+			 //copying the orignal img path and then dropping multiple time and having orinal img as it was placed previously
+			
+                                                                                
+			
+			event.preventDefault();
+
+			/*setTimeout(function(){                             //removing item from container after 3 secs
+				document.querySelector(productId).remove();
+
+			},3000);*/
+			
+
+		}
+		function dragFinished(event)
+		{
+			event.preventDefault(); //prevents the default behaviour of our selected element
+
+		}
+	</script>
+
+</body>
+</html>

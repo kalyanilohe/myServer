@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>iterating multiple json objects inside single array</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var empDetails=[
+
+	{
+		empname:"raj",
+		empage:25,
+		gender:"male"
+	},
+
+	{
+		empname:"Teena",
+		empage:25,
+		gender:"female"
+	},
+
+	{
+		empname:"rahul",
+		empage:25,
+		gender:"male"
+	}
+
+	];
+
+	for(var i=0;i<=empDetails.length;i++){
+		for(var temp in empDetails[i]){
+			console.log(temp +"is"+ empDetails[i][temp]);
+		}
+	}
+</script>
+</body>
+</html>

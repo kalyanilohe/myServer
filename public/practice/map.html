@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>map operations</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var details=new Map(); //creating map
+		details.set("name","kalyani");
+		details.set("age",23);
+		details.set("gender","female");
+		details.set("location","amt");
+		console.log(details.get("age"));
+		console.log(details.size);
+        /*console.log(details.clear());*/
+        console.log(details.has("name"));
+        console.log(details.delete("age"));
+		console.log(details);
+		for(let[value,key] of details.entries()){
+		    console.log(value);
+		    console.log(key);
+		    }
+	</script>
+</body>
+</html>

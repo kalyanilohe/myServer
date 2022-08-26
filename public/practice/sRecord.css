@@ -1,0 +1,57 @@
+.sDatafields
+{
+	border: 2px solid;
+	background: #ccc;
+	margin: 10px auto;
+	width: 500px;
+	height: 300px;
+}
+li
+{
+	
+	list-style: none;
+	margin: 10px;
+	padding: 5px;
+}
+.distance
+{
+	margin: 20px;
+}
+.add
+{
+	position: absolute;
+	right: 500px;
+	top: 270px;
+	padding: 5px;
+	width: 55px;
+}
+.li2
+{
+	position: relative;
+	left:40px;
+}
+.headrow
+{
+	font-weight: bold;
+	border: 2px solid;
+}
+
+.studentRecord
+{
+	margin: 10px auto;
+	padding: 3px;
+    display: none;
+    width: 700px;
+}
+table
+{
+	border: 1px solid;
+	margin: 10px auto;
+	width: 550px;
+}
+td
+{
+	border: 1px solid;
+	padding: 5px;
+	width: 40px;
+}

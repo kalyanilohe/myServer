@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>student details using DHTML</title>
+	<link rel="stylesheet" type="text/css" href="studdetails.css">
+	<script type="text/javascript" src="sdetails.js"></script>
+</head>
+<body>
+	<div class="userDetails">
+	
+	<ul>
+		<li>
+			enter student name:<input type="text" id="s_name">
+		</li>
+		<li>
+			enter age:<input type="number" id="s_age">
+		</li>
+		<li>
+			gender:<input type="radio" name="gender" value="female">F
+			<input type="radio" name="gender" value="male">M
+
+		</li>
+		<li>
+			Languages: 
+			<input type="checkbox"  value="english" name="language">English
+			<input type="checkbox" value="marathi" name="language">Marathi
+			<input type="checkbox" value="hindi" name="language">Hindi
+			<input type="checkbox" value="telugu" name="language">Telugu
+		</li>
+		<li>
+			<select id="s_class">
+				<option>class 1</option>
+				<option>class 2</option>
+				<option>class 3</option>
+				<option>class 4</option>
+			</select>
+		</li>
+		<li>
+			enter marks:
+			<input class="marks" type="number" id="m1">
+			<input class="marks" type="number" id="m2">
+			<input class="marks" type="number" id="m3">
+			<input class="marks" type="number" id="m4">
+			<input class="marks" type="number" id="m5">
+		</li>
+		<li>
+			<input type="button" value="generate progress card" onclick="readStudInfo()">
+		</li>
+	</ul>
+</div>
+
+	<div class="progressCard">
+		
+		<ul>
+			<li>
+				Student name:<span id="sname"></span>
+			</li>
+			<li>
+				Student age:<span id="sage"></span>
+			</li>
+			<li>
+				Student gender:<span id="sgender"></span>
+			</li>
+			<li>
+				languages known:<span id="slanguages"></span>
+			</li>
+			<li>
+				student class:<span id="sclass"></span>
+			</li>
+			<li>
+				Student total marks:<span id="stotal"></span>
+			</li>
+			<li>
+				Student average:<span id="savg"></span>
+			</li>
+			<li>
+				Student grade:<span id="sgrade"></span>
+			</li>
+		</ul>
+	</div>
+
+</body>
+</html>

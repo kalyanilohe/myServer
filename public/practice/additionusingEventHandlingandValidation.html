@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>addition using event handling and validation</title>
+	<style type="text/css">
+		ul
+		{
+			border:2px solid;
+			background: #ccc;
+			margin: 10px auto;
+			padding: 10px;
+			width: 500px;
+		}
+		li
+		{
+			list-style: none;
+			border: 1px solid;
+			padding: 5px;
+			margin: 5px;
+			background: #fff;
+		}
+		.abc
+		{
+			display: none;
+		}
+		.errBlock
+		{
+			color:red;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>Enter first value:<input type="text" id="fval" onkeypress="return validateData(event)"></li>
+		<li>Enter second value:<input type="text" id="sval"onkeypress="return validateData(event)" ></li>
+		<li>
+			<input type="button" value="addition" onclick="doAddition(event)">
+		</li>
+		<li class="abc">
+			sum is:<span></span>
+		</li>
+		<li class="errBlock">
+			
+		</li>
+	</ul>
+	<script type="text/javascript">
+		function doAddition(event)
+		{
+			console.log(event);
+			var fval=document.querySelector("#fval").value;
+			var sval=document.querySelector("#sval").value;
+			if(fval=='' || sval=='')
+			{
+				document.querySelector(".errBlock").style.display='block';
+				document.querySelector(".errBlock").innerText="Miising mandatory fields"
+				return;
+			}
+			fval=parseInt(fval);
+			sval=parseInt(sval);
+			var result=fval + sval;
+		document.querySelector("span").innerText=result;
+		document.querySelector(".abc").style.display='block';
+			
+		}
+		function validateData(event)
+		{
+			console.log(event);
+			console.log("key press");
+			if(event.charCode>=48 && event.charCode<=57)
+			{
+				return true;
+			}else
+			{
+				return false;
+			}
+		}
+	</script>
+</body>
+	
+	
+</body>
+</html>

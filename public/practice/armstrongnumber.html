@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>armstrong number</title>
+</head>
+<body>
+<script type="text/javascript">
+	var i=prompt("enter number");
+	var rem;
+	var a=0;
+	var final=i;
+
+	while(i>0)
+	{
+
+		rem=i%10;
+		a=rem*rem*rem+a;
+		i=parseInt(i/10);
+
+	}
+
+	if(a==final)
+	{
+	console.log("number is armstrong" +a);
+    }else{
+    	console.log("number is not armstrong" +a);
+    }
+
+</script>
+</body>
+</html>

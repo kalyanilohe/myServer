@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>string methods</title>
+</head>
+<body>
+<script type="text/javascript">
+	var msg=" hello everyone hello good morning ";
+	console.log(msg);
+
+	console.log(msg.toUpperCase());
+	console.log(msg.toLowerCase());
+
+	var char=msg.charAt(6);
+	console.log(char);
+
+	var asciiValue=msg.charCodeAt(10);
+	console.log(asciiValue);
+
+	/*var msg2="bye all";
+	var concatedString=msg1.concat(msg2);
+	console.log(concatedString);*/
+
+	var includeOrNot=msg.includes("hello");
+	console.log(includeOrNot);
+
+    var replacedStr=msg.replace(/hello/g,"hii");
+	console.log(replacedStr);
+    
+    var slicedstr=msg.slice(7,10);
+	console.log(slicedstr);
+
+	var sub=msg.substr(7,5);
+	console.log(sub);
+
+	var trimedstr=msg.trim();
+	console.log(trimedstr);
+
+	var splitedstr=msg.split(",");
+	console.log(splitedstr);
+
+</script>
+</body>
+</html>

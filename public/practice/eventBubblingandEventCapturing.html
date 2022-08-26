@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>event bubbling and event capturing</title>
+	<style type="text/css">
+		.parent
+		{
+			border: 1px solid;
+			margin: 10px;
+			padding: 10px;
+			background: #ccc;
+			width: 250px;
+			height: 250px;
+		}
+		.child
+		{
+			border: 1px solid;
+			margin: 10px;
+			padding: 10px;
+			background: #fff;
+			width: 150px;
+			height: 150px;
+		}
+	</style>
+</head>
+<body>
+<div class="parent">
+	parent
+	<div class="child">child</div>
+
+	<script type="text/javascript">
+		document.querySelector(".parent").addEventListener("click", function(){
+			console.log("parent got fired");
+		}, true );
+		document.querySelector(".child").addEventListener("click", function(){
+			console.log("child got fired");
+		}, true );
+	</script>
+
+</div>
+</body>
+</html>

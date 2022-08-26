@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<style type="text/css">
+		.block
+		{
+			border: 1px solid;
+			margin: 50px auto;
+			background: yellow;
+			height: 230px;
+			width: 250px;
+		}	
+	</style>
+</head>
+<body>
+	<div class="block" onclick="dojob()"></div>
+	<script type="text/javascript">
+		function dojob()
+		{
+			$(".block").animate({    //animate takes object as parameter
+				width:"350px",
+				height:"300px",
+				background:"pink",
+			},5000);
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>local and session storage</title>
+	<style type="text/css">
+		.wlcmsg
+		{
+			display: none;
+			text-align: center;
+			width: 400px;
+			background: #ccc;
+			height: 30px;
+			position: relative;
+			top:300px;
+			left: 450px;
+			padding: 10px;
+		}
+		.msgbox
+		{
+			margin: 50px auto;
+			border: 2px solid;
+			padding: 5px;
+			width: 400px;
+			height: 60px;
+			text-align: center;
+		}
+		.themeBlock
+		{
+			text-align: right;
+		}
+		
+	</style>
+</head>
+<body>
+	<input type="text" id="uname">
+	<input type="button" value="Enter" onclick="readname()">
+	<input type="button" value="CreateContainer" onclick="createContainer()">
+	<input type="button" value="show my task" onclick="showTask()">
+	<div class="themeBlock">
+		select theme:
+		<select id="usertheme" onchange="changeTheme(event)">
+			<option>red</option>
+			<option>pink</option>
+			<option>blue</option>
+			<option>green</option>
+		</select>
+		
+	</div>
+	<div class="container">
+		
+	</div>
+	<div class="wlcmsg">
+		
+	</div>
+	<script type="text/javascript">
+		var name;
+		if(localStorage.getItem("User name")){
+			createContainer(localStorage.getItem("User name"));
+
+		}
+		if(localStorage.getItem("theme value")){
+			applyTheme(localStorage.getItem("theme value"))
+		}
+		function readname()
+		{
+			name=document.querySelector("#uname").value;
+			localStorage.setItem("User name",name);
+		}
+		function createContainer()
+		{
+			var divTag=document.createElement("div");
+			divTag.setAttribute("id","msgbox");
+			divTag.setAttribute("class","msgbox");
+			document.querySelector(".container").append(divTag);
+		}
+		function showTask()
+		{
+		
+            document.querySelector("#msgbox").innerHTML="congratulations.you have won the task";
+            document.querySelector(".wlcmsg").innerHTML="Thanks Ms."+ name +" for using our page";
+            document.querySelector(".wlcmsg").style.display='block';
+               
+		}
+		function changeTheme(event)
+		{
+			console.log(event);
+			var themevalue=document.querySelector("#usertheme").value;
+			localStorage.setItem("theme value",themevalue);
+			applyTheme(themevalue);
+		}
+		function applyTheme(themevalue)
+		{
+            document.querySelector("body").style['background-color']=themevalue;
+		}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var totalmarks=450;
+		var checkStudentResult=new Promise(function(passed,failed){     //creating promises 
+			if(totalmarks>400){
+				return passed("student is passed");
+			}else{
+				return failed("student is failed")
+			}
+		});
+		checkStudentResult.then(function(res){       //then method taking two functions
+			console.log("success response");
+			console.log(res);
+		},function(err){
+			console.log("failure")
+		});
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		(function(){ 
+
+		   var a=12; 
+		   var b=34;
+		   var sum=a+b;                                                      // defing closure
+			document.querySelector("body").innerHTML=sum;
+		})();
+        
+        //closure content can not be accessed outside
+		document.querySelector("body").innerHTML=sum;   
+
+
+           //function without call will not be executed
+		function sample()                                          
+		{
+			document.querySelector("body").innerHTML="bye";
+		}
+
+
+	</script>
+
+</body>
+</html>

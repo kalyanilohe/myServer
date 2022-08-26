@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>ajax sample</title>
+	
+</head>
+<body>
+	<input type="button" value="show emp data" onclick="getData()">
+	<div id="mainBlock" >
+		<% for(var key in empData)%>
+	     <%{%>
+		 Employee <%=key%>:<%=empData[key]%>
+			<%} %>
+	</div>
+</body>
+</html>
+
+
+
+		

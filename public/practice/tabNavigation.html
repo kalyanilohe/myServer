@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tab navigation</title>
+	<style type="text/css">
+		.tab
+		{
+			background: #ccc;
+			margin: 1px;
+			padding: 10px;
+		}
+		.tab:hover
+		{
+			color: green;
+			cursor: pointer;
+			background: #fff;
+		}
+		.container
+		{
+			display: flex;
+			flex-direction: row;
+		}
+		img
+		{
+			height: 30px;
+			width: 30px;
+			cursor: pointer;
+			display: none;
+		}
+		@media screen and (max-width: 300px)
+		{
+			.container
+			{
+				flex-direction: column;
+				display: none;
+			}
+			img
+			{
+				display: block;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="menu" onclick="togglemenu()">
+		<img src="https://img.icons8.com/cotton/2x/menu.png">
+		
+	</div>
+	<div class="container">
+		<div class="tab">Home</div>
+		<div class="tab">History</div>
+		<div class="tab">Contact us</div>
+		<div class="tab">Careers</div>
+		
+	</div>
+
+	<script type="text/javascript">
+		function togglemenu()
+		{
+		document.querySelector(".container").style.display='block';
+	}
+	</script>
+
+</body>
+</html>

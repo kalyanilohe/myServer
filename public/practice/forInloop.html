@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>for in looping</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var studDetails={
+		name:"kalyani",
+		age:25,
+		gender:"female",
+		adress:{
+			streetno: 2,
+			doorno:107,
+			flatno:105,
+			permanentAdress:{
+				perStreetNO:307,
+				perDoorno:809
+			}
+		},
+		contacts:{
+			personalnos:{
+				no1:6878534676786,
+				no2:5875468785
+			},
+			homeNos:{
+				hono1:47685467897,
+				hono2:6456778987
+			}
+
+		},
+		pin:444803
+	};
+
+	function displayData(studDetails)
+	{
+		for(var temp in studDetails){
+			if(typeof(studDetails[temp])=='object'){
+				displayData(studDetails[temp]);
+
+			}else{
+			console.log(temp);
+			console.log(studDetails[temp]);
+		}
+	}
+	}
+	displayData(studDetails);
+</script>
+</body>
+</html>

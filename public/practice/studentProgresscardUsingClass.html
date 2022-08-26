@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>student details using DHTML</title>
+	<link rel="stylesheet" type="text/css" href="studdetails.css">
+	<script type="text/javascript" src="sdetails.js"></script>
+</head>
+<body>
+	<div class="userDetails">
+	
+	<ul>
+		<li>
+			enter student name:<input type="text" id="s_name">
+		</li>
+		<li>
+			enter age:<input type="number" id="s_age">
+		</li>
+		<li>
+			gender:<input type="radio" name="gender" value="female">F
+			<input type="radio" name="gender" value="male">M
+
+		</li>
+		<li>
+			<select id="s_class">
+				<option>class 1</option>
+				<option>class 2</option>
+				<option>class 3</option>
+				<option>class 4</option>
+			</select>
+		</li>
+		<li>
+			enter marks:
+			<input class="marks" type="number" id="m1">
+			<input class="marks" type="number" id="m2">
+			<input class="marks" type="number" id="m3">
+			<input class="marks" type="number" id="m4">
+			<input class="marks" type="number" id="m5">
+		</li>
+		<li>
+			<input type="button" value="generate progress card" onclick="readStudInfo()">
+		</li>
+	</ul>
+</div>
+
+	<div class="progressCard">
+		
+		
+	</div>
+
+</body>
+</html>

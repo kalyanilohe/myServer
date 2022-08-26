@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ajax sample</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+	<input type="button" value="show emp data" onclick="getData()">
+	<div id="mainBlock"></div>
+
+	<script type="text/javascript">
+
+		function getData()
+		{
+			var dataUrl="http://localhost:8082/practice/ajaxPractice/data/proddata.json";
+			var data={};
+			$.ajax({
+				url:dataUrl,
+				method: 'GET',
+				dataType:'JSON',
+				success : function(response){
+					console.log("successfully communication happenned");
+					console.log(response);
+					renderUI(response.data);
+
+				},
+				error: function(){
+					console.log("error in communication");
+				}
+			});
+
+		}
+		function renderUI(data)
+		{
+			$("mainBlock").html("");
+			console.log(data);
+			var maindiv=$("<div></div>");
+			for(var key in data)
+			{
+				var lable="Employee "+key;
+				var divTag=$("<div></div").html(label + ":"+ data[key]);
+				maindiv.append(divTag);
+			}
+			$("#mainBlock").append(maindiv);
+		}
+	</script>
+
+</body>
+</html>

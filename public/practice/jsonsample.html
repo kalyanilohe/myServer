@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>json sample</title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	var studDetails={
+		name: "kalyani",
+		age: 23,
+		gender: "female",
+		marks: [34, 56, 78],
+		total:0,
+		avg:0
+	}
+
+	for(var i=0;i<studDetails.marks.length;i++)
+	{
+		studDetails.total=studDetails.total+studDetails.marks[i];
+	}
+
+	studDetails.avg=studDetails.total/studDetails.marks.length;
+
+	console.log("student name is"+studDetails.name);
+	console.log("student age is"+studDetails.age);
+	console.log("student gender is"+studDetails.gender);
+	console.log("student total marks are"+ studDetails.total);
+	console.log("student average is"+studDetails.avg);
+
+</script>
+</body>
+</html>
